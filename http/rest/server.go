@@ -29,7 +29,7 @@ func NewServer() (*Server, error) {
 		return nil, err
 	}
 
-	database, err := db.Connect(db.ConfingDB{
+	database, err := db.Connect(db.ConfigDB{
 		Host:     cnf.Database.Host,
 		Port:     cnf.Database.Port,
 		User:     cnf.Database.User,
