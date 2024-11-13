@@ -7,6 +7,6 @@ import (
 // HelloWorld is a handler for hello world
 func (s service) HelloWorld() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		s.respond(w, "Hello, World!", http.StatusOK)
+		s.respond(w, "Hello, Sayang!", http.StatusOK)
 	}
 }

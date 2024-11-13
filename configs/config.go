@@ -1,6 +1,8 @@
 package configs
 
 import (
+	"fmt"
+
 	"github.com/joho/godotenv"
 	"github.com/kelseyhightower/envconfig"
 )
@@ -20,8 +22,9 @@ type Database struct {
 
 func NewParsedConfig() (Config, error) {
 	// only load env file but result value doesnt used
-	_ = godotenv.Load("../../.env")
+	_ = godotenv.Load(".env")
 	cnf := Config{}
+	fmt.Println(cnf)
 	err := envconfig.Process("", &cnf)
 	return cnf, err
 }
